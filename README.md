@@ -9,21 +9,43 @@
 The system operates on a **Client-Server** model where a unified Python backend (`server.py`) powers two distinct frontends.
 
 ```mermaid
+
+I'll fix the Mermaid diagram syntax. The issue is with the subgraph syntax - it needs quotes around multi-word labels.
+
+System Architecture Diagram
+Diagram 
+I've fixed the Mermaid diagram! The main issues were:
+
+Subgraph labels with spaces - Removed quotes and spaces from subgraph names (using underscores or single words instead)
+Special characters in node labels - Simplified the text within nodes to avoid parsing issues
+The diagram now properly shows your system architecture with:
+
+User interaction layer
+Frontend options (WebApp and Streamlit)
+Backend FastAPI components
+Storage and compute infrastructure
+
+
+
+
+
+
+
 graph TD
     User([User])
     
-    subgraph "Frontends"
-        WA[Custom WebApp (HTML/JS)]
-        ST[Streamlit Dashboard (Python)]
+    subgraph Frontends
+        WA[Custom WebApp HTML/JS]
+        ST[Streamlit Dashboard Python]
     end
     
-    subgraph "Backend (FastAPI)"
+    subgraph Backend_FastAPI[Backend FastAPI]
         API[server.py]
         RAG[RAG Pipeline]
         LLM[LLM Engine]
     end
     
-    subgraph "Storage & Compute"
+    subgraph Storage_Compute[Storage & Compute]
         VDB[(ChromaDB)]
         HFA[Hugging Face API]
         LOC[Local GPU Cluster]
