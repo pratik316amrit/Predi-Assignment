@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpecExtractor | Neural Spec Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-layer-red"></div>
+    <div class="bg-layer-green"></div>
+
+    <!-- MAIN FLOATING GLASS PANEL -->
+    <div class="glass-interface">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-icon"></div>
+                <h2>SpecExtractor</h2>
+            </div>
+
+            <div class="nav-groups">
+                <div class="nav-label">COMPUTE CORE</div>
+                <button id="btn-api" class="nav-item active" onclick="setMode('API')">
+                    <span class="dot active"></span> API Based
+                </button>
+                <button id="btn-local" class="nav-item" onclick="setMode('Local')">
+                    <span class="dot"></span> Local GPU based
+                </button>
+            </div>
+
+            <div class="system-status-card">
+                <div class="status-header">SYSTEM METRICS</div>
+                <div class="metric-row">
+                    <span>Status</span>
+                    <span class="status-green">OPERATIONAL</span>
+                </div>
+                <div class="metric-row">
+                    <span>Core</span>
+                    <span id="current-mode-display">API MODE</span>
+                </div>
+            </div>
+
+            <div id="api-warning" class="warning-card">
+                <div class="icon">⚠️</div>
+                <div class="text">Running on Quantized Inference. Precision may vary.</div>
+            </div>
+
+            <div id="local-warning" class="warning-card danger hidden">
+                <div class="icon">⚡</div>
+                <div class="text">High Performance Mode. Requires 16GB VRAM.</div>
+            </div>
+
+            <button class="purge-btn" onclick="clearChat()">
+                <span>Reset Context</span>
+            </button>
+        </aside>
+
+        <!-- CHAT AREA -->
+        <main class="chat-container">
+            <div id="chat-history" class="messages-area">
+                <!-- Chat history starts empty as requested -->
+            </div>
+
+            <div class="input-wrapper">
+                <div class="input-glass">
+                    <input type="text" id="user-input" placeholder="Ask about vehicle specifications..."
+                        autocomplete="off" onkeypress="handleKey(event)">
+                    <button class="send-btn" onclick="sendMessage()">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
