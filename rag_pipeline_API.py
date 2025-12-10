@@ -29,7 +29,7 @@ class HFAPIEmbeddings:
     """
 
     def __init__(self, api_key: str, model_name: str):
-        self.api_key = "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"
+        self.api_key = "Provide the key"
         self.model_name = model_name
         # Bind this client to the embedding model directly
         self.client = InferenceClient(
