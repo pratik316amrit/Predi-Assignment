@@ -7,9 +7,7 @@
 ## 🏗️ System Architecture
 
 The system operates on a **Client-Server** model where a unified Python backend (`server.py`) powers two distinct frontends.
-## 🏗️ System Architecture
 
-The system operates on a **Client-Server** model where a unified Python backend (`server.py`) powers two distinct frontends.
 ```mermaid
 graph TD
     User([User])
@@ -36,7 +34,7 @@ graph TD
     WA -->|HTTP POST| API
     ST -->|Direct Import| RAG
     API --> RAG
-    RAG  VDB
+    RAG <--> VDB
     RAG --> LLM
     LLM -->|API Mode| HFA
     LLM -->|Local Mode| LOC
