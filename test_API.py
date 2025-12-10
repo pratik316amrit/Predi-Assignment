@@ -15,7 +15,7 @@ print("=" * 80)
 print("INITIALIZING Llama-3.1-8B-Instruct...")
 print("=" * 80)
 
-hf_token = "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"
+hf_token = """Provide the key"""
 if not hf_token:
     raise ValueError("HF_API_KEY not found in environment.")
 
