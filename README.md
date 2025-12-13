@@ -1,6 +1,6 @@
 # ⚡ Spercer | Vehicle Spec Extraction Agent
 
-**Spercer** is a state-of-the-art **Retrieval-Augmented Generation (RAG)** system designed to extract precise vehicle specifications from complex technical PDF manuals. It features a dual-interface design (Standard Streamlit & Premium WebApp) and a dual-inference engine (Cloud API & Local Cluster), wrapped in a high-fidelity "Glassmorphism" UI.
+**Spercer** is a **Retrieval-Augmented Generation (RAG)** system designed to extract precise vehicle specifications from complex technical PDF manuals. It features a dual-interface design (Standard Streamlit & Premium WebApp) and a dual-inference engine (Cloud API & Local Cluster), wrapped in a high-fidelity "Glassmorphism" UI.
 
 ---
 
